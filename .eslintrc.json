@@ -2,7 +2,8 @@
   "root": true,
   "ignorePatterns": [
     "projects/**/*",
-    "polyfills.ts"
+    "polyfills.ts",
+    "main.ts"
   ],
   "overrides": [
     {
