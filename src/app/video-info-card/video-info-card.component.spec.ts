@@ -8,9 +8,9 @@ describe('VideoInfoCardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ VideoInfoCardComponent ]
+      declarations: [VideoInfoCardComponent],
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

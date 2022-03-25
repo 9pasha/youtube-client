@@ -8,9 +8,9 @@ describe('SearchVideoComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SearchVideoComponent ]
+      declarations: [SearchVideoComponent],
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

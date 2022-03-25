@@ -7,6 +7,7 @@ import { VideoInfoCardComponent } from './video-info-card/video-info-card.compon
 import { HeaderComponent } from './header/header.component';
 import { SearchVideoComponent } from './search-video/search-video.component';
 import { VideoInfoCardsListComponent } from './video-info-cards-list/video-info-cards-list.component';
+import { SortVideosPanelComponent } from './sort-videos-panel/sort-videos-panel.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { VideoInfoCardsListComponent } from './video-info-cards-list/video-info-
     HeaderComponent,
     SearchVideoComponent,
     VideoInfoCardsListComponent,
+    SortVideosPanelComponent,
   ],
   imports: [
     BrowserModule,
