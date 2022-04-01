@@ -5,9 +5,15 @@
 
   &__sort-name {
     color: #659dea;
+    padding: 0 .3rem;
 
     &:hover {
       cursor: pointer;
+    }
+
+    &--active {
+      text-decoration: underline;
+      text-decoration-color: #b3b3b3;
     }
   }
 

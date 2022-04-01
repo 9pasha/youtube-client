@@ -1,9 +1,16 @@
 <nz-layout class="app">
   <nz-header class="app__header">
-    <header></header>
+    <header
+      (sortBy)="changeSortBy($event)">
+    </header>
   </nz-header>
 
   <nz-content class="app__main">
-    <video-info-cards-list></video-info-cards-list>
+    <video-info-cards-list
+      [isSortByIncreasingViews]="isSortByIncreasingViews"
+      [isSortByIncreasingDate]="isSortByIncreasingDate"
+      [isSortByWord]="isSortByWord"
+      [sortWord]="sortWord">
+    </video-info-cards-list>
   </nz-content>
 </nz-layout>

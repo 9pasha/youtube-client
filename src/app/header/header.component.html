@@ -96,7 +96,9 @@
     <div
       nz-col
       nzSpan="12">
-      <sort-videos-panel></sort-videos-panel>
+      <sort-videos-panel
+        (sortBy)="emitSortBy($event)">
+      </sort-videos-panel>
     </div>
 
     <div

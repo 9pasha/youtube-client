@@ -22,6 +22,10 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzLayoutModule } from "ng-zorro-antd/layout";
 import { VideosService } from "../services/videos.service";
 import { HighlightBorderWithDateDirective } from '../directives/highlight-border-with-date.directive';
+import { SortVideosByView } from "../pipes/sort-videos-by-view";
+import { SortVideosByDate } from "../pipes/sort-videos-by-date";
+import { SortVideosBySearchTitle } from "../pipes/sort-videos-by-search-title";
+import { FormsModule } from "@angular/forms";
 
 const antDesignIcons = AllIcons as {
   [key: string]: IconDefinition;
@@ -40,7 +44,10 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons)
     LogoComponent,
     UserProfileComponent,
     MainComponent,
-    HighlightBorderWithDateDirective
+    HighlightBorderWithDateDirective,
+    SortVideosByView,
+    SortVideosByDate,
+    SortVideosBySearchTitle
   ],
   imports: [
     BrowserModule,
@@ -52,6 +59,7 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons)
     NzGridModule,
     NzIconModule.forRoot(icons),
     NzLayoutModule,
+    FormsModule,
   ],
   providers: [VideosService],
   bootstrap: [AppComponent],

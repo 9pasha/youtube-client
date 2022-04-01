@@ -4,7 +4,10 @@
   nzAlign="top"
   class="videos-info-cards-list">
   <video-info-card
-    *ngFor="let video of videos"
+    *ngFor="let video of videos
+    | sortVideosBySearchTitle: isSortByWord:sortWord
+    | sortVideosByDate: isSortByIncreasingDate
+    | sortVideosByView: isSortByIncreasingViews"
     [title]="video.snippet.title"
     [imageUrl]="video.snippet.thumbnails.standard.url"
     [viewAmount]="video.statistics.viewCount"
