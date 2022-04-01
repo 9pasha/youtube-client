@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'video-info-card',
@@ -7,11 +7,17 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class VideoInfoCardComponent implements OnInit {
   @Input() title: string | undefined;
+
   @Input() imageUrl: string | undefined;
+
   @Input() likeAmount: string | undefined;
+
   @Input() dislikeAmount: string | undefined;
+
   @Input() commentAmount: string | undefined;
+
   @Input() viewAmount: string | undefined;
+
   @Input() date: string | undefined;
 
   constructor() { }

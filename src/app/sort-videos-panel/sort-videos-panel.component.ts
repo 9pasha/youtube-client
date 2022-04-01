@@ -1,18 +1,23 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { ISortData } from "../../interfaces/sort-data";
+import {
+  Component, EventEmitter, OnInit, Output,
+} from '@angular/core';
+import { ISortData } from '../../interfaces/sort-data';
 
 @Component({
   selector: 'sort-videos-panel',
   templateUrl: './sort-videos-panel.component.html',
-  styleUrls: ['./sort-videos-panel.component.scss']
+  styleUrls: ['./sort-videos-panel.component.scss'],
 })
 
 export class SortVideosPanelComponent implements OnInit {
   @Output() sortBy = new EventEmitter<ISortData>();
 
   isSortByIncreaseViews: boolean = false;
+
   isSortByIncreaseDate: boolean = false;
+
   isSortByWord: boolean = false;
+
   sortWord: string = '';
 
   constructor() { }
@@ -38,7 +43,7 @@ export class SortVideosPanelComponent implements OnInit {
     this.sortBy.emit({
       type: 'word',
       isIncrease: this.isSortByWord,
-      word: this.sortWord
+      word: this.sortWord,
     });
   }
 }

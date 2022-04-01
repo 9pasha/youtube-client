@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { VideosService } from "../../services/videos.service";
-import { IVideo } from "../../interfaces/video";
+import { VideosService } from '../../services/videos.service';
+import { IVideo } from '../../interfaces/video';
 
 @Component({
   selector: 'video-info-cards-list',
@@ -10,8 +10,11 @@ import { IVideo } from "../../interfaces/video";
 
 export class VideoInfoCardsListComponent implements OnInit {
   @Input() isSortByIncreasingViews: boolean = false;
+
   @Input() isSortByIncreasingDate: boolean = false;
+
   @Input() isSortByWord: boolean = false;
+
   @Input() sortWord: string | null = null;
 
   videos: Array<IVideo> | undefined;
@@ -20,6 +23,6 @@ export class VideoInfoCardsListComponent implements OnInit {
 
   ngOnInit(): void {
     this.videos = this._videosService.getVideos();
-    console.log(this.videos)
+    console.log(this.videos);
   }
 }

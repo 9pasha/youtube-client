@@ -1,21 +1,29 @@
-import { AfterViewInit, Directive, ElementRef, Input } from '@angular/core';
+import {
+  AfterViewInit, Directive, ElementRef, Input,
+} from '@angular/core';
 
 @Directive({
-  selector: '[highlightBorderWithDate]'
+  selector: '[highlightBorderWithDate]',
 })
-export class HighlightBorderWithDateDirective implements AfterViewInit  {
+export class HighlightBorderWithDateDirective implements AfterViewInit {
   @Input() date: string | undefined;
 
-  private blueColor: string = "#2f80ec";
-  private redColor: string = "#eb5757";
-  private greenColor: string = "#27ae61";
+  private blueColor: string = '#2f80ec';
+
+  private redColor: string = '#eb5757';
+
+  private greenColor: string = '#27ae61';
 
   private dateNowTimeStamp: number = new Date().getTime();
 
   private daysInMonth: number = 30;
+
   private hoursInDay: number = 24;
+
   private minutesInHour: number = 60;
+
   private secondsInMinute: number = 60;
+
   private millisecondsInSecond: number = 1000;
 
   constructor(private el: ElementRef) { }
@@ -35,7 +43,7 @@ export class HighlightBorderWithDateDirective implements AfterViewInit  {
   }
 
   getBorderStyles(color: string) {
-    return `5px solid ${ color }`;
+    return `5px solid ${color}`;
   }
 
   isDateLessThanSevenDays() {

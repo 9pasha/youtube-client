@@ -8,9 +8,9 @@ describe('SortVideosPanelComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SortVideosPanelComponent ]
+      declarations: [SortVideosPanelComponent],
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

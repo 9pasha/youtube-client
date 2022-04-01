@@ -1,11 +1,10 @@
 import { Injectable } from '@angular/core';
-import { mockData } from "../constants/mockData";
+import { mockData } from '../constants/mockData';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class VideosService {
-
   constructor() { }
 
   getVideos() {

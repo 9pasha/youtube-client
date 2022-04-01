@@ -1,5 +1,7 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { ISortData } from "../../interfaces/sort-data";
+import {
+  Component, EventEmitter, OnInit, Output,
+} from '@angular/core';
+import { ISortData } from '../../interfaces/sort-data';
 
 @Component({
   selector: 'header',
@@ -9,6 +11,7 @@ import { ISortData } from "../../interfaces/sort-data";
 
 export class HeaderComponent implements OnInit {
   @Output() sortBy = new EventEmitter<ISortData>();
+
   @Output() search = new EventEmitter();
 
   constructor() { }

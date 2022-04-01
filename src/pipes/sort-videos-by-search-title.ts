@@ -1,8 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { IVideo } from "../interfaces/video";
+import { IVideo } from '../interfaces/video';
 
 @Pipe({
-  name: 'sortVideosBySearchTitle'
+  name: 'sortVideosBySearchTitle',
 })
 export class SortVideosBySearchTitle implements PipeTransform {
   transform(array: Array<IVideo> | undefined, isSearching: boolean, word: string | null): Array<IVideo> | undefined {

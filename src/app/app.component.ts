@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ISortData } from "../interfaces/sort-data";
+import { ISortData } from '../interfaces/sort-data';
 
 @Component({
   selector: 'app-root',
@@ -13,8 +13,11 @@ export class AppComponent {
   isListItemsShow: boolean = false;
 
   isSortByIncreasingViews: boolean = false;
+
   isSortByIncreasingDate: boolean = false;
+
   isSortByWord: boolean = false;
+
   sortWord: string | null = null;
 
   changeSortBy(payload: ISortData) {
