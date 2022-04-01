@@ -5,11 +5,14 @@ import { IVideo } from '../interfaces/video';
   name: 'sortVideosBySearchTitle',
 })
 export class SortVideosBySearchTitle implements PipeTransform {
-  transform(array: Array<IVideo> | undefined, isSearching: boolean, word: string | null): Array<IVideo> | undefined {
+  transform(array: Array<IVideo> | undefined, isSearching: boolean, word: string | null)
+    :Array<IVideo> | undefined
+  {
     if (!array || !isSearching) {
       return array;
     }
 
-    return array.filter((video: IVideo) => video.snippet.title.match(word as string));
+    return array
+      .filter((video: IVideo) => video.snippet.title.match(word as string));
   }
 }

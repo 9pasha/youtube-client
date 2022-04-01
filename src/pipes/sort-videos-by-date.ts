@@ -5,17 +5,20 @@ import { IVideo } from '../interfaces/video';
   name: 'sortVideosByDate',
 })
 export class SortVideosByDate implements PipeTransform {
-  transform(array: Array<IVideo> | undefined, isIncreasing: boolean): Array<IVideo> | undefined {
+  transform(array: Array<IVideo> | undefined, isIncreasing: boolean):
+  Array<IVideo> | undefined {
     if (!array) {
       return array;
     }
 
     return array.sort((a: IVideo, b: IVideo) => {
       if (isIncreasing) {
-        return new Date(b.snippet.publishedAt).getTime() - new Date(a.snippet.publishedAt).getTime();
+        return new Date(b.snippet.publishedAt).getTime()
+          - new Date(a.snippet.publishedAt).getTime();
       }
 
-      return new Date(a.snippet.publishedAt).getTime() - new Date(b.snippet.publishedAt).getTime();
+      return new Date(a.snippet.publishedAt).getTime()
+        - new Date(b.snippet.publishedAt).getTime();
     });
   }
 }
