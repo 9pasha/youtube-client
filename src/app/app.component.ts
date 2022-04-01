@@ -10,6 +10,8 @@ import { ISortData } from "../interfaces/sort-data";
 export class AppComponent {
   title = 'youtube-client';
 
+  isListItemsShow: boolean = false;
+
   isSortByIncreasingViews: boolean = false;
   isSortByIncreasingDate: boolean = false;
   isSortByWord: boolean = false;

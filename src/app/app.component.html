@@ -1,12 +1,14 @@
 <nz-layout class="app">
   <nz-header class="app__header">
     <header
+      (search)="isListItemsShow = true"
       (sortBy)="changeSortBy($event)">
     </header>
   </nz-header>
 
   <nz-content class="app__main">
     <video-info-cards-list
+      *ngIf="isListItemsShow"
       [isSortByIncreasingViews]="isSortByIncreasingViews"
       [isSortByIncreasingDate]="isSortByIncreasingDate"
       [isSortByWord]="isSortByWord"

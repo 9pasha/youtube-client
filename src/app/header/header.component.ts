@@ -9,6 +9,7 @@ import { ISortData } from "../../interfaces/sort-data";
 
 export class HeaderComponent implements OnInit {
   @Output() sortBy = new EventEmitter<ISortData>();
+  @Output() search = new EventEmitter();
 
   constructor() { }
 
@@ -23,5 +24,9 @@ export class HeaderComponent implements OnInit {
 
   emitSortBy(data: ISortData) {
     this.sortBy.emit(data);
+  }
+
+  searchItems() {
+    this.search.emit();
   }
 }
