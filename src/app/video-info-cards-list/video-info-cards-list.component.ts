@@ -19,10 +19,10 @@ export class VideoInfoCardsListComponent implements OnInit {
 
   videos: Array<IVideo> | undefined;
 
-  constructor(private _videosService: VideosService) { }
+  constructor(private videosService: VideosService) { }
 
   ngOnInit(): void {
-    this.videos = this._videosService.getVideos();
+    this.videos = this.videosService.getVideos();
     console.log(this.videos);
   }
 }

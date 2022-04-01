@@ -6,8 +6,7 @@ import { IVideo } from '../interfaces/video';
 })
 export class SortVideosBySearchTitle implements PipeTransform {
   transform(array: Array<IVideo> | undefined, isSearching: boolean, word: string | null)
-    :Array<IVideo> | undefined
-  {
+    :Array<IVideo> | undefined {
     if (!array || !isSearching) {
       return array;
     }
