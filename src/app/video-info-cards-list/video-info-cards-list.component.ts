@@ -7,6 +7,7 @@ import { IVideo } from "../../interfaces/video";
   templateUrl: './video-info-cards-list.component.html',
   styleUrls: ['./video-info-cards-list.component.scss'],
 })
+
 export class VideoInfoCardsListComponent implements OnInit {
   @Input() isSortByIncreasingViews: boolean = false;
   @Input() isSortByIncreasingDate: boolean = false;
