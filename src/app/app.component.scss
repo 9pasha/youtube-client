@@ -1,0 +1,13 @@
+.app {
+  &__header {
+    height: auto;
+    max-height: 11rem;
+    padding: 1rem 3.1rem;
+    background-color: #e5e5e5;
+  }
+
+  &__main {
+    padding: 2rem 3.1rem;
+    background-color: #ffffff;
+  }
+}

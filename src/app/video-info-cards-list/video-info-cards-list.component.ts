@@ -1,13 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import { VideosService } from "../../services/videos.service";
+import { IVideo } from "../../interfaces/video";
 
 @Component({
-  selector: 'app-video-info-cards-list',
+  selector: 'video-info-cards-list',
   templateUrl: './video-info-cards-list.component.html',
   styleUrls: ['./video-info-cards-list.component.scss'],
 })
 export class VideoInfoCardsListComponent implements OnInit {
-  constructor() { }
+  videos: Array<IVideo> | undefined;
+
+  constructor(private _videosService: VideosService) { }
 
   ngOnInit(): void {
+    this.videos = this._videosService.getVideos();
+    console.log(this.videos)
   }
 }

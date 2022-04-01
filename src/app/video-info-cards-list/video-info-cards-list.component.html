@@ -1,1 +1,17 @@
-<p>video-info-cards-list works!</p>
+<div
+  nz-row
+  nzJustify="start"
+  nzAlign="top"
+  class="videos-info-cards-list">
+  <video-info-card
+    *ngFor="let video of videos"
+    [title]="video.snippet.title"
+    [imageUrl]="video.snippet.thumbnails.standard.url"
+    [viewAmount]="video.statistics.viewCount"
+    [likeAmount]="video.statistics.likeCount"
+    [dislikeAmount]="video.statistics.dislikeCount"
+    [commentAmount]="video.statistics.commentCount"
+    [date]="video.snippet.publishedAt"
+    class="videos-info-cards-list__card">
+  </video-info-card>
+</div>

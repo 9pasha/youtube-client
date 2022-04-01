@@ -1,0 +1,17 @@
+.sort-videos-panel {
+  &__label {
+    color: #b3b3b3;
+  }
+
+  &__sort-name {
+    color: #659dea;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__word-sort-input {
+    width: 52%;
+  }
+}

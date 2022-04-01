@@ -1,1 +1,40 @@
-<p>sort-videos-panel works!</p>
+<div
+  nz-row
+  class="sort-videos-panel">
+  <span
+    nz-col
+    nzSpan="4"
+    class="sort-videos-panel__label">
+    Sorting by:
+  </span>
+
+  <span
+    nz-col
+    nzSpan="2"
+    class="sort-videos-panel__sort-name">
+    date
+  </span>
+
+  <span
+    nz-col
+    nzSpan="5"
+    class="sort-videos-panel__sort-name">
+    count of views
+  </span>
+
+  <div
+    nz-col
+    nzSpan="13"
+    class="sort-videos-panel__word-sort">
+    <span
+      class="sort-videos-panel__sort-name">
+      by word or sentence
+    </span>
+
+    <input
+      nz-input
+      placeholder="video name filter"
+      nzSize="small"
+      class="sort-videos-panel__word-sort-input" />
+  </div>
+</div>

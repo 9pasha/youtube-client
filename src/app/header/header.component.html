@@ -1,1 +1,108 @@
-<p>header works!</p>
+<div class="header">
+  <div
+    nz-row
+    class="header__actions">
+    <div
+      nz-col
+      nzSpan="6">
+    </div>
+
+    <div
+      nz-col
+      nzSpan="12">
+      <div
+        nz-row
+        nzAlign="middle"
+        class="full-height">
+        <div
+          nz-col
+          nzSpan="3">
+          <logo></logo>
+        </div>
+
+        <div
+          nz-col
+          nzSpan="18">
+          <div
+            nz-row
+            nzAlign="middle"
+            class="full-height">
+            <nz-input-group
+              nzSearch
+              nzSize="large"
+              [nzAddOnAfter]="suffixButton">
+              <input
+                type="text"
+                nz-input
+                placeholder="input search text" />
+            </nz-input-group>
+
+            <ng-template #suffixButton>
+              <button
+                nz-button
+                nzType="primary"
+                nzSize="large"
+                nzSearch>
+                Search
+              </button>
+            </ng-template>
+          </div>
+        </div>
+
+        <div
+          nz-col
+          nzSpan="3">
+          <div
+            nz-row
+            nzJustify="end">
+            <button
+              nz-button
+              nzType="primary"
+              nzSize="large"
+              (click)="toggleSortPanel()">
+              <i
+                nz-icon
+                nzType="control"
+                nzTheme="outline">
+              </i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      nz-col
+      nzSpan="6">
+      <div
+        nz-row
+        nzJustify="end"
+        nzAlign="middle"
+        class="full-height">
+          <user-profile></user-profile>
+      </div>
+    </div>
+  </div>
+
+  <div
+    *ngIf="isShowSortPanel"
+    nz-row>
+    <div
+      nz-col
+      nzSpan="6">
+
+    </div>
+
+    <div
+      nz-col
+      nzSpan="12">
+      <sort-videos-panel></sort-videos-panel>
+    </div>
+
+    <div
+      nz-col
+      nzSpan="6">
+
+    </div>
+  </div>
+</div>

@@ -1,10 +1,10 @@
-import { Video } from './video';
+import { IVideo } from './video';
 
 export interface IVideosData {
   kind: string,
   etag: string,
   pageInfo: IPageInfo,
-  items: Array<Video>
+  items: Array<IVideo>
 }
 
 interface IPageInfo {
