@@ -1,7 +1,7 @@
 import {
   Component, EventEmitter, OnInit, Output,
 } from '@angular/core';
-import { ISortData } from '../../interfaces/sort-data';
+import { ISortData } from '../../../../interfaces/sort-data';
 
 @Component({
   selector: 'sort-videos-panel',

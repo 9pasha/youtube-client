@@ -1,7 +1,8 @@
 import {
   Component, EventEmitter, OnInit, Output,
 } from '@angular/core';
-import { ISortData } from '../../interfaces/sort-data';
+import { ISortData } from '../../../../interfaces/sort-data';
+import { SearchVideoService } from '../../../youtube/services/search-video.service';
 
 @Component({
   selector: 'header',
@@ -12,9 +13,7 @@ import { ISortData } from '../../interfaces/sort-data';
 export class HeaderComponent implements OnInit {
   @Output() sortBy = new EventEmitter<ISortData>();
 
-  @Output() search = new EventEmitter();
-
-  constructor() { }
+  constructor(private searchVideoService: SearchVideoService) { }
 
   ngOnInit(): void {
   }
@@ -30,6 +29,6 @@ export class HeaderComponent implements OnInit {
   }
 
   searchItems() {
-    this.search.emit();
+    this.searchVideoService.showVideosList();
   }
 }

@@ -7,12 +7,6 @@
   </nz-header>
 
   <nz-content class="app__main">
-    <video-info-cards-list
-      *ngIf="isListItemsShow"
-      [isSortByIncreasingViews]="isSortByIncreasingViews"
-      [isSortByIncreasingDate]="isSortByIncreasingDate"
-      [isSortByWord]="isSortByWord"
-      [sortWord]="sortWord">
-    </video-info-cards-list>
+    <router-outlet></router-outlet>
   </nz-content>
 </nz-layout>

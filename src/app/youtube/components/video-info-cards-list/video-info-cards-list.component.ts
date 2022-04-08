@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { VideosService } from '../../services/videos.service';
-import { IVideo } from '../../interfaces/video';
+import { VideosService } from '../../../../services/videos.service';
+import { IVideo } from '../../../../interfaces/video';
 
 @Component({
   selector: 'video-info-cards-list',
@@ -23,6 +23,7 @@ export class VideoInfoCardsListComponent implements OnInit {
 
   ngOnInit(): void {
     this.videos = this.videosService.getVideos();
+    // eslint-disable-next-line no-console
     console.log(this.videos);
   }
 }

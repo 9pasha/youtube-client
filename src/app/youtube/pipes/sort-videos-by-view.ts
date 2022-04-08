@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { IVideo } from '../interfaces/video';
+import { IVideo } from '../../../interfaces/video';
 
 @Pipe({
   name: 'sortVideosByView',

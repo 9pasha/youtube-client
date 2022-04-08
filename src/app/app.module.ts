@@ -13,19 +13,9 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { VideoInfoCardComponent } from './video-info-card/video-info-card.component';
-import { HeaderComponent } from './header/header.component';
-import { SearchVideoComponent } from './search-video/search-video.component';
-import { VideoInfoCardsListComponent } from './video-info-cards-list/video-info-cards-list.component';
-import { SortVideosPanelComponent } from './sort-videos-panel/sort-videos-panel.component';
-import { LogoComponent } from './logo/logo.component';
-import { UserProfileComponent } from './user-profile/user-profile.component';
-import { MainComponent } from './main/main.component';
 import { VideosService } from '../services/videos.service';
-import { HighlightBorderWithDateDirective } from '../directives/highlight-border-with-date.directive';
-import { SortVideosByView } from '../pipes/sort-videos-by-view';
-import { SortVideosByDate } from '../pipes/sort-videos-by-date';
-import { SortVideosBySearchTitle } from '../pipes/sort-videos-by-search-title';
+import { CoreModule } from './core/core.module';
+import { YoutubeModule } from './youtube/youtube.module';
 
 const antDesignIcons = AllIcons as {
   [key: string]: IconDefinition;
@@ -36,18 +26,6 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons)
 @NgModule({
   declarations: [
     AppComponent,
-    VideoInfoCardComponent,
-    HeaderComponent,
-    SearchVideoComponent,
-    VideoInfoCardsListComponent,
-    SortVideosPanelComponent,
-    LogoComponent,
-    UserProfileComponent,
-    MainComponent,
-    HighlightBorderWithDateDirective,
-    SortVideosByView,
-    SortVideosByDate,
-    SortVideosBySearchTitle,
   ],
   imports: [
     BrowserModule,
@@ -60,6 +38,8 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons)
     NzIconModule.forRoot(icons),
     NzLayoutModule,
     FormsModule,
+    CoreModule,
+    YoutubeModule,
   ],
   providers: [VideosService],
   bootstrap: [AppComponent],
